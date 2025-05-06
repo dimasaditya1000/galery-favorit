@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MY FAVORITE PERSON</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Bubblegum Sans', cursive;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff3399;
+      font-size: 40px;
+      text-shadow: 2px 2px #fff0f5;
+    }
+
+    .show-btn {
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .show-btn:hover {
+      background-color: #ff3399;
+    }
+
+    .gallery {
+      display: none; /* awalnya disembunyikan */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: 30px auto 0;
+    }
+
+    .photo {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .photo img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px dashed #ff66b2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 6px 12px;
+      border-radius: 12px;
+      color: #cc0066;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .photo:hover .caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MY FAVORITE PERSON 💖</h1>
+
+  <!-- Tombol untuk memunculkan galeri -->
+  <button class="show-btn" onclick="showGallery()">Klik di sini untuk lihat foto 📸</button>
+
+  <!-- Galeri disembunyikan awalnya -->
+  <div class="gallery" id="gallery">
+    <div class="photo"><img src="D1.jpeg" alt="Ani"><div class="caption">si paling cantik 🐱</div></div>
+    <div class="photo"><img src="D2.jpeg" alt="Budi"><div class="caption">si paling manies 🧢</div></div>
+    <div class="photo"><img src="D3.jpeg" alt="Cici"><div class="caption">si paling nongki 🌸</div></div>
+    <div class="photo"><img src="D4.jpeg" alt="Didi"><div class="caption">si badmoodan 🦄</div></div>
+    <div class="photo"><img src="D5.jpeg" alt="Eva"><div class="caption">si paling pintar 🐰</div></div>
+    <div class="photo"><img src="D6.jpeg" alt="Fahri"><div class="caption">si paling hebat 🎮</div></div>
+    <div class="photo"><img src="D7.jpeg" alt="Gina"><div class="caption">si paling lucu 🍓</div></div>
+    <div class="photo"><img src="D8.jpeg" alt="Hana"><div class="caption">si paling imut 🐻</div></div>
+    <div class="photo"><img src="D9.jpeg" alt="Iwan"><div class="caption">Si paling sabar 🧸</div></div>
+  </div>
+
+  <script>
+    function showGallery() {
+      document.getElementById("gallery").style.display = "grid";
+    }
+  </script>
+
+</body>
+</html>
